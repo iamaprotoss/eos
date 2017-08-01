@@ -30,6 +30,8 @@ public:
    void require_authorization(const types::AccountName& account);
    void require_scope(const types::AccountName& account)const;
 
+   bool all_authorizations_used() const;
+
    const chain_controller&      controller;
    const chainbase::database&   db;  ///< database where state is stored
    const chain::Transaction&    trx; ///< used to gather the valid read/write scopes
